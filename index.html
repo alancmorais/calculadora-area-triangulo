@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <title>Calculadora de Área de Triângulos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style>
+    #retangulo {
+        height: 100px;
+        width: 200px;
+        background: blue;
+    }
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <img src="https://www.colegiopectrus.com.br/images/logo.png" width="200">
+        <span class="navbar-brand mb-0 h1">Calculadora de Área de Triângulos</span>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <p>Essa calculadora irá calcular a área de um triângulo.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p>A área do triângulo é obtida a partir da multiplicação da base x altura dividido por 2. Observe a seguinte fórmula: A = (b * h) / 2, onde A = área, b = base e h = altura</p>
+            </div>
+            <div class="col-md-6">
+                <img src="https://www.colegiopectrus.com.br/images/triangulo.png" width="200">
+            </div>
+        </div>
+        <form>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label for="base">Base</label>
+                    <input type="number" class="form-control" id="base">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="altura">Altura</label>
+                    <input type="number" class="form-control" id="altura">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <button type="button" class="btn btn-primary" onclick="Calcula()">Calcular</button>
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <div class="form-group col-md-3">
+                <label for="area">Área do Triângulo (Base x Altura / 2)</label>
+                <input type="number" class="form-control" id="area">
+            </div>
+        </div>
+    </div>
+    <script>
+        function Calcula() {
+            var base = document.getElementById("base").value;
+            var altura = document.getElementById("altura").value;
+
+            var area = (base * altura) / 2;
+
+            var inputArea = document.getElementById("area");
+            inputArea.value = area;
+
+        }
+    </script>
+</body>
+
+</html>
